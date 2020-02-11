@@ -80,8 +80,6 @@ if __name__ == '__main__':
 	payload_04 = payload_04(url)
 	if payload_01 and payload_02 and payload_03 and payload_04 == 2:
 		print('[-]连接超时:{}'.format(url))
-	# elif payload_01 and payload_02 and payload_03 and payload_04 == 0:
-	# 	print('[-]初步测试暂不存在thinkcmf漏洞:{}'.format(url))
 	elif payload_01 and payload_02 and payload_03 and payload_04 == 1:
 		print('[-]初步测试暂不存在thinkcmf漏洞: {}'.format(url))
 	else:
