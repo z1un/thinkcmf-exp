@@ -1,5 +1,5 @@
 # Author: zjun
-# Github: https://github.com/bestreder
+# Github: https://github.com/z1un
 # Date: 2020-02-10
 
 import requests
