@@ -29,4 +29,4 @@
 
 该脚本具有一定误差,请谨慎使用,仅供参考!
 
-详见:[zjun's blog](http://www.zjun.info/2020/02/10/thinkcmfexp/)
+详见:[一个简单的thinkcmf-exp](https://blog.zjun.info/2020/a-simple-thinkcmf-exp.html)
